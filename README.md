@@ -11,20 +11,20 @@
 </p>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/pedromiiguel/Pet-nao-se-compra?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/pedromiiguel/PetNaoSeCompra?color=%2304D361">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/pedromiiguel/Pet-nao-se-compra">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/pedromiiguel/PetNaoSeCompra">
 	
   
-  <a href="https://github.com/pedromiiguel/Pet-nao-se-compra/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pedromiiguel/Pet-nao-se-compra">
-  </a>
+ 
+   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pedromiiguel/PetNaoSeCompra">
+  
 
   <img alt="License" src="https://img.shields.io/github/license/pedromiiguel/PetNaoSeCompra">
 </p>
 
 <h1 align="center">
-    <img alt="Pet nao se compra" title="Pet nao se compra" src=".github/indexx.png" width="70%" height="430px"/>
+    <img alt="Pet nao se compra" title="Pet nao se compra" src=".github/indexx.png" width="90%" height="430px"/>
 </h1>
 
 
