@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="stylesheet" href="/styles/dog.css" />
+  <link rel="shortcut icon" href="/assets/dog.svg" type="image/svg" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,600;1,400&family=Archivo:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  {{#each animal.rows}}
+    <title>{{this.name}}</title>
+  {{/each}}
+
+</head>
+
+<body>
+  <div class="page-edit-dog">
+    <header>
+      <a href="/find-dog">
+        <span><img src="/assets/left-arrow.svg" alt="" /></span>
+        Voltar para a lista de pets
+      </a>
+    </header>
+    <main>
+      {{#each animal.rows}}
+      <section class="dog-img">
+        <img src="{{this.img}}" alt="">
+      </section>
+      <section class="dog-description">
+        <p>Nome: {{this.name}}</p>
+        <p>Sexo: {{this.sex}}</p>
+        <p>Espécie: {{this.species}}</p>
+        <p>Porte: {{this.port}}</p>
+        <p>Telefone: {{this.telephone}}</p>
+        <p>Descrição: {{this.description}}</p>
+        <div class="btn-container">
+          <a target="_blanck" href="https://api.whatsapp.com/send?phone=55{{this.telephone}}&text=Olá, gostaria de adotar o(a) {{this.name}}.">Quero adotar</a>
+        </div>
+      </section>
+
+      {{/each}}
+    </main>
+
+
+  </div>
+</body>
+
+</html>

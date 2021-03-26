@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="stylesheet" href="/styles/edit-dog.css" />
+  <link rel="shortcut icon" href="/assets/dog.svg" type="image/svg" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,600;1,400&family=Archivo:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <title>Editando pet</title>
+</head>
+
+<body>
+  <div class="page-edit-dog">
+    <header>
+      <a href="/find-dog">
+        <span><img src="/assets/left-arrow.svg" alt="" /></span>
+        Voltar para a lista de pets
+      </a>
+    </header>
+    <main>
+      {{#each animal.rows}}
+      <section class="dog-img">
+        <img src="{{this.img}}" alt="">
+      </section>
+      <section class="dog-description">
+        <form action="update/{{this.id}}" method="POST">
+          <label for="name">Nome:</label>
+          <input type="text" name="name" value="{{this.name}}" />
+          <label for="sex">Sexo:</label>
+
+          <select name="sex">
+            <option value="">Selecione o Sexo</option>
+            <option value="Macho">Macho</option>
+            <option value="Fêmea">Fêmea</option>
+          </select>
+
+          <label for="species">Sexo:</label>
+          <select name="species">
+            <option value="">Selecione a Espécie</option>
+            <option value="Cachorro">Cachorro</option>
+            <option value="Gato">Gato</option>
+          </select>
+
+          <label for="port">Porte:</label>
+          <select name="port">
+            <option value="">Selecione o Porte</option>
+            <option value="Pequeno">Pequeno</option>
+            <option value="Médio">Médio</option>
+            <option value="Grande">Grande</option>
+          </select>
+
+          <label for="telephone">Telefone:</label>
+          <input name="telephone" class="cel-sp-mask" type="text" value="{{this.telephone}}">
+
+          <label for="description">Descrição:</label>
+          
+            <textarea name="description" cols="50" rows="3"></textarea>
+
+          <button class="btn-edit" type="submit"> Alterar pet </button>
+
+
+          <div class="btn-container">
+          </div>
+        </form>
+
+      </section>
+
+      {{/each}}
+    </main>
+  </div>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
+  <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

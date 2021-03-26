@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="stylesheet" href="/styles/find-dog.css" />
+  <link rel="shortcut icon" href="/assets/dog.svg" type="image/svg" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,600;1,400&family=Archivo:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <title>Encontre seu pet</title>
+</head>
+
+<body>
+  <div class="page-find-dog">
+    <header>
+      <a href="/">
+        <span><img src="/assets/left-arrow.svg" alt="" /></span>
+        Voltar para home
+      </a>
+    </header>
+    <main>
+      <div class="cards">
+
+        {{#each animals.rows}}
+        <div class="card">
+          <a href="/dog/{{this.id}}" class="img-card"><img src={{this.img}} alt="" /></a>
+          <div class="card-content">
+            <h1 id="name">{{this.name}}</h1>
+            <img src="/assets/{{this.sex}}.svg" alt="" />
+
+          </div>
+
+          <div class="card-content">
+            <p id="city">{{this.state}} / {{this.city}}</p>
+            <p><img src="/assets/telephone.svg" alt="" />{{this.telephone}}</p>
+          </div>
+          <div class="card-content">
+            <p>{{this.port}}</p>
+            <div class="icons">
+              <a href="/edit-dog/{{this.id}}"><img src="/assets/update.svg" alt="" /></a>
+              <a href="" class="removeAnimal"> <img src="/assets/delete.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+
+      </div>
+    </main>
+  </div>
+
+  {{#each animals.rows}}
+  <div id="modal" class="hide">
+    <div class="modal-delete" data-id="{{this.id}}">
+      <header>
+        <h2>Remover pet</h2> <a href="" class="close"><img src="/assets/close.svg" alt=""></a>
+      </header>
+      <main>
+        <p>Tem certeza de que deseja excluir este pet?</p>
+        <small>Essa ação não pode ser desfeita.</small>
+      </main>
+      <div class="modal-buttons">
+        <a class="btn-modal" id="cancel">Cancelar</a>
+        <a data-id="{{this.id}}" class="btn-modal" id="remove">Confirmar</a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+
+  <script src="/scripts/find-dog.js"></script>
+</body>
+
+</html>

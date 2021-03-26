@@ -1,0 +1,114 @@
+.page-landing {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #e2e2e2;
+}
+
+
+.content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-img img {
+  width: 500px;
+  height: 500px;
+}
+
+.buttons-container {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons-container a {
+  border: none;
+  width: 200px;
+  padding: 20px;
+  height: 80px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.buttons-container a:first-child {
+  background: #0067b1;
+}
+
+.buttons-container a:last-child {
+  background: #2f2e41;
+}
+
+.buttons-container a:first-child:hover {
+  background: #00487b;
+}
+
+.buttons-container a:last-child:hover {
+  background: #20202d;
+}
+
+.page-content h1 {
+  font-size: 56px;
+  font-weight: bold;
+  font-family: 'RocknRoll One', sans-serif;
+  margin: 20px 0;
+}
+
+.page-content h2 {
+  font-family: 'Archivo Narrow', sans-serif;
+  text-align: left;
+  margin-bottom: 60px;
+  line-height: 30px;
+  font-size: 20px;
+  width: 100%;
+}
+
+
+/* 
+.logo-container {
+
+  margin: 0;
+  text-align: left;
+}
+
+.content-img {
+
+  justify-self: end;
+}
+
+
+.buttons-container {
+
+  justify-content: flex-start;
+}
+
+.content-section {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 26px;
+}
+
+.content-img {
+  width: 100%;
+}
+
+
+
+*/
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/assets/dog.svg" type="image/svg" />
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="stylesheet" href="/styles/register-dog.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,600;1,400&family=Archivo:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <title>Cadastre seu pet</title>
+</head>
+
+<body>
+  <div class="page-register-dog">
+    <header>
+      <a href="/">
+        <span><img src="/assets/left-arrow.svg" alt="" /></span>
+        Voltar para home
+      </a>
+    </header>
+    <form action="save-dog" method="POST">
+      <h1>Cadastro</h1>
+
+      <fieldset>
+        <div class="field-group">
+          <div class="field">
+            <label for="name">Nome</label>
+            <input type="text" name="name" required="required" />
+          </div>
+          <div class="field">
+            <label for="img">Imagem do Pet</label>
+            <input type="url" name="img" required="required" placeholder="http://image.com.br" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field">
+            <label for="sex">Sexo</label>
+            <select name="sex" required="required">
+              <option value="">Selecione o Sexo</option>
+              <option value="Macho">Macho</option>
+              <option value="Fêmea">Fêmea</option>
+            </select>
+
+            <!-- <input type="hidden" name="state" /> -->
+          </div>
+          <div class="field">
+            <label for="species">Espécie</label>
+            <select name="species" required="required">
+              <option value="">Selecione a Espécie</option>
+              <option value="Cachorro">Cachorro</option>
+              <option value="Gato">Gato</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-group">
+          <div class="field">
+            <label for="uf">Estado</label>
+            <select name="uf" required="required">
+              <option value="">Selecione o Estado</option>
+            </select>
+            <input type="hidden" name="state" />
+          </div>
+
+          <div class="field">
+            <label for="city">Cidade</label>
+            <select name="city" disabled="disabled" required="required">
+              <option value="">Selecione a Cidade</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-group">
+          <div class="field">
+            <label for="port">Porte</label>
+            <select name="port" required="required">
+              <option value="">Selecione o Porte</option>
+              <option value="Pequeno">Pequeno</option>
+              <option value="Médio">Médio</option>
+              <option value="Grande">Grande</option>
+
+            </select>
+          </div>
+          <div class="field">
+            <label for="telephone">Telefone</label>
+            <input class="cel-sp-mask" name="telephone" type="text" placeholder="Ex.: (00) 00000-0000">
+          </div>
+        </div>
+
+        <div>
+          <div class="field">
+            <label for="description">Descrição</label>
+            <textarea name="description" id="" cols="50" rows="5"
+              placeholder="Escreva uma descrição do seu pet"></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit">Finalizar cadastro</button>
+    </form>
+  </div>
+</body>
+<script src="/scripts/register-dog.js"></script>
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+</html>
